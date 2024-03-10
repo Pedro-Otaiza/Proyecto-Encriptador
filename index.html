@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,56 +7,43 @@
     <link rel="icon" href="/locked.png" type="image/x-icon"/>
     <link rel="stylesheet" href="/Proyecto Encriptar/style.css">
     <script src="/Proyecto Encriptar/app.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
 </head>
 <body>
-
-    <header class="head"> 
-        <p class="head-title"> Encriptador de Información </p> 
-
-    </header>
-
-<h1 class="titulo">Encriptar Información</h1>
-
+<div class="title">
+    <h1 class="titulo">Encriptar Información</h1>
+</div>
 <section class="main">
     <div class="main-encriptar">
-        <h2> Encriptar Mensaje </h2>
-            <label for="input-texto"> Solo letras minúsculas, sin acento </label>
-            <input class="text-input" type="text" name="input-texto" id="input-texto" placeholder="Ingrese el texto aquí">
-            <input class="btn" type="button" value="Encriptar!" id="btn-encriptar" onclick="encriptar();">
+        <h2 class="encriptarMensaje"> Encriptar Mensaje </h2>
+            <label for="input-texto" id="soloLetras"><img src="./img/exclamation-mark.png" id="icon" alt="exclamation-mark"> Solo letras minúsculas, sin acento </label>
+            <textarea class="text-input" name="input-texto" id="input-texto" placeholder="Ingrese el texto aquí"></textarea>
+
+        <div class="main-btn_desencriptar">
+            <input class="btn" type="button" value="Encriptar" id="btn-encriptar" onclick="encriptar();">
+
+            <input class="btn" type="button" value="Desencriptar" id="btn-desencriptar" onclick="desencriptar();">
+        </div>
     </div>
+
+    <img src="./img/wired-lineal.gif" class="img-arrow">
 
     <div class="main-encriptado">
         <h2> Mensaje Encriptado </h2>
-        <input class="text-input_salida" type="text" placeholder="Esperando Mensaje Encriptado" id="input-encriptado">
-    
-        <div class="main-desencriptar_btn">
-            <button class="btn" id="btn-copy" onclick="copiarContenido();"> Copiar </button>
         
-            <input class="btn" type="button" value="Desencriptar!" id="btn-desencriptar" onclick="desencriptar();">
+        <textarea class="text-input_salida" type="text" id="input-encripted"></textarea>
+
+
+        <div class="main-btn_copiar">
+        <button class="btn" id="btn-copy" onclick="copy(); makeChange();"> Copiar </button>
         </div>
     </div>
 </section>
 
 
-
-
-
-
-<section class="main">
-    <input class="textInput_salida" type="text" placeholder="Esperando Mensaje" id="input-encripted">
-</section>
-
-
-
-
-
-<footer class="footer"> Developed By Pedro Reyes Otaiza </footer>
-
+<footer class="footer"> Developed By Pedro Reyes Otaiza 
+</footer>
 
 </body>
 
-</html>
-
-
-</body>
 </html>
