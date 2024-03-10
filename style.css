@@ -1,26 +1,29 @@
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    /*background-image: url('/security1.jfif');*/
     background-image: transparent;
     width: 100%;
     height: 100%;
-    margin:0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.head {
-    display: block;
+.title {
+    position: fixed;
     width: 100%;
-    height: 7em;
-    background-color: rgb(219, 219, 219);
-    border: 5px rgb(129, 129, 129);
+    border-bottom: 3px solid black;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-input, #input-encriptado {
     text-transform: lowercase;
-}
-
-.head-title {
-    float: left;
 }
 
 h1 {
@@ -32,39 +35,49 @@ h1 {
     justify-content:space-around;
     align-items:center;
     width: 100%;
-    height: 100%;
-    background-color: rgba(175, 175, 175, 0.74);
-    margin-top: 5em;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.5);
+    flex: 1;
 }
 
 .main-encriptar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-    height: 20rem;
-    border: 3px;
+    width: 50%;
+    height: 35rem;
+    border: 1px;
     border-radius: 5px;
-    background-color: rgb(132, 133, 130);
+    background-color: rgb(219, 219, 219);
 }
 
-.main-desencriptar {
-
+.encriptarMensaje {
+    margin: 10px;
 }
 
-.text-input {
+#soloLetras {
+    font-size: 12px;
+}
+
+#icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Text input in */
+.text-input, #input-texto {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align:justify;
-    width: 90%;
-    height: 40rem;
-    border: 3px white;
+    text-align: justify;
+    width: 95%;
+    height: 25rem;
+    border: 3px;
     border-radius: 6px;
-    background-color: rgb(252, 253, 251);
+    background-color: rgb(255, 255, 255);
+    resize: none;
 }
 
-.main-desencriptar_btn {
+.main-btn_desencriptar {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -73,33 +86,49 @@ h1 {
     height: auto;
 }
 
+.main-btn_copiar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    height: auto;
+}
+
 .main-encriptado {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
-    height: 20rem;
+    width: 35%;
+    height: 35rem;
     border: 3px;
     border-radius: 5px;
-    background-color: rgb(132, 133, 130);
+    background-color: rgb(219, 219, 219);
 }
 
 #btn-encriptar {
     width: 30%;
-    height: 5rem;
+    height: 2rem;
     border: 2;
     border-radius: 5px;
-    background-color: rgb(21, 161, 40);
+    color: #ffffff;
+    background-color: rgba(17, 21, 247, 0.671);
     margin-bottom: 1em;
     margin-top: 1em;
 }
 
+
+/* Text input out */
 .text-input_salida {
-    width: 90%;
-    height: 40rem;
+    display: flex;
+    text-align: justify;
+
+    width: 95%;
+    height: 25rem;
     border: 3px white;
     border-radius: 6px;
-    background-color: rgb(252, 253, 251);
+    resize: none;
 }
 
 #btn-copy, #btn-desencriptar {
@@ -110,8 +139,12 @@ h1 {
     height: 2rem;
     border: 2;
     border-radius: 5px;
-    background-color: rgb(43, 159, 226);
-    margin-bottom: 1em;
+    background-color: rgb(255, 255, 255);
+}
+
+.img-arrow {
+    width: 4em;
+    height: 10%;
 }
 
 .textInput_salida {
@@ -125,13 +158,14 @@ h1 {
 
 footer {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10em;
-    margin-bottom: 0;
+    justify-content:center;
+    align-items:center;
     font-family: 'Courier New', Courier, monospace;
-    background-color: lightgray;
+    background-color: rgb(182, 180, 180);
     color: rgb(226, 10, 10);
     width: 100%;
-    height: 11em;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    position: relative;
 }
