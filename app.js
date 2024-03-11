@@ -4,13 +4,11 @@ function encriptar() {
     var textoEncriptado = texto.replace(/e/gi, "enter").replace(/i/gi, "imes").replace(/a/gi, "ai").replace(/o/gi, "ober").replace(/u/gi, "ufat");
     document.querySelector(".text-input_salida").value = textoEncriptado;
     document.querySelector("#input-texto").value;
-
 }
 
 var boton1 = document.querySelector("#btn-encriptar");
     boton1.onclick = encriptar;
-
-    
+ 
 //Función para desencriptar la información.
 function desencriptar() {
     var texto = document.querySelector("#input-texto").value;
@@ -20,14 +18,9 @@ function desencriptar() {
 
 }
 
-
 function copiar() {
     var contenido = document.querySelector('#input-encripted');
     contenido.select();
     document.execCommand("copy"); 
     console.log("Copiado al portapapeles!");
 }
-
-function makeChange() {
-    document.getElementById('#btn-copy').style.display = 'visibility';
- }
